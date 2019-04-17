@@ -13,5 +13,5 @@ RUN npm run build
 # from build one copy the build directory to build 2 and run nginx.
 
 FROM nginx
+EXPOSE 80
 COPY --from=builder /app/build /usr/share/nginx/html
-
